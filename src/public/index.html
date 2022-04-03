@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Formulario Carga de productos</h2>
+    <form onsubmit="return enviarProducto(this)">
+        <input id="nombre" type="text" placeholder="Nombre de producto"  /> 
+        <input id="precio" type="text" placeholder="precio de producto" />
+        <input id="thumbnail" type="text" placeholder="thumbnail" />
+        <input type="submit"></input>
+    </form>
+    <hr>
+    <h2 style="color:darkred;">Listado de productos</h2>
+    <table class="table" id="tablaProductos">
+        <thead>
+            <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Thumbnail</th>
+            <th style="width: 36px;"></th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <hr>
+    <div style="color: rgb(0, 0, 0); margin: 10rem; justify-content: center; background-color: rgb(93, 132, 214);" id="mensaje">
+        <h3 style= "justify-content: center; text-align: center">Centro de Mensajes</h3>
+        <input id="chatBox"name="chatBox">
+        <br>
+        <br>
+        <p id="log" ></p>
+    </div>
+    
+    
+    
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
